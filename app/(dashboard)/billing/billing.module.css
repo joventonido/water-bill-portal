@@ -1,0 +1,28 @@
+/* Billing.module.css */
+.billingContainer {
+    font-family: sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+  }
+  
+  .billingTitle {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .customerName {
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .usageInfo, .amountDue {
+    margin-bottom: 8px;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
