@@ -67,7 +67,9 @@ export default function Billing() {
     <div className={styles.billingContainer}>
       {" "}
       <h1 className={styles.billingTitle}>Billing Information</h1>
-      <h2 className={styles.customerName}>{userDetails.customerName}'s Bill</h2>
+      <h2 className={styles.customerName}>
+        {userDetails.customerName}&apos;s Bill
+      </h2>
       <div className={styles.usageInfo}>
         <p>
           Usage:{" "}

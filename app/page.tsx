@@ -16,11 +16,11 @@ export default function Home() {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-  const [userDetails, setUserDetails] = useState<FormData | null>(null);
+  // const [userDetails, setUserDetails] = useState<FormData | null>(null);
   const router = useRouter();
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    setUserDetails(data);
+    // setUserDetails(data);
     router.push(
       `/billing?customerName=${data.customerName}&currentReading=${data.currentReading}&previousReading=${data.previousReading}`
     );
