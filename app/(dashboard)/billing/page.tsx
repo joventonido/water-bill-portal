@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import styles from "./billing.module.css";
 
 interface UserDetails {
@@ -9,7 +9,7 @@ interface UserDetails {
   previousReading: string;
 }
 
-export default function Billing() {
+const Billing = () => {
   const searchParams = useSearchParams();
   const [billAmount, setBillAmount] = useState<number | null>(null);
   const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
@@ -83,5 +83,13 @@ export default function Billing() {
       </div>
       {errorMessage && <div className={styles.error}>{errorMessage}</div>}{" "}
     </div>
+  );
+};
+
+export default function BillingPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Billing />
+    </Suspense>
   );
 }
