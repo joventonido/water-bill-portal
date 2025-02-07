@@ -1,4 +1,21 @@
-export default function handler(req, res) {
+export default function handler(
+  req: {
+    method: string;
+    body: {
+      customerName: any;
+      currentReading: any;
+      previousReading: any;
+      billAmount: any;
+    };
+  },
+  res: {
+    status: (arg0: number) => {
+      (): any;
+      new (): any;
+      json: { (arg0: { message: string }): void; new (): any };
+    };
+  }
+) {
   if (req.method === "POST") {
     const { customerName, currentReading, previousReading, billAmount } =
       req.body;
